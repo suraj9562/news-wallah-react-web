@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import {
-    Link
-  } from "react-router-dom";
 
 export class Newsitem extends Component {
   render() {
@@ -9,28 +6,28 @@ export class Newsitem extends Component {
     return (
       <div>
         <div className="card">
-          <span class="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{zIndex : "1",left : "90%"}}>
+          <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{zIndex : "1",left : "90%"}}>
             {source}
-            <span class="visually-hidden">unread messages</span>
+            <span className="visually-hidden">unread messages</span>
           </span>
           <img src={imgUrl} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{title + "..."}</h5>
             <p className="card-text">{infoText + "..."}</p>
-            <p class="card-text">
-              <small class="text-muted">
+            <p className="card-text">
+              <small className="text-muted">
                 Author - {author ? author : "Unknown"}, Posted On -{" "}
                 {new Date(time).toGMTString()}
               </small>
             </p>
-            <Link
+            <a
               href={NewsUrl}
               rel="noreferrer"
               target="_blank"
               className="btn btn-sm btn-primary"
             >
               Read More
-            </Link>
+            </a>
           </div>
         </div>
       </div>
